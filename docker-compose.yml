@@ -18,7 +18,7 @@ services:
   ollama:
     image: ollama/ollama:latest
     ports:
-      - 78699:11434
+      - 7878:11434
     volumes:
       - .:/code
       - ./ollama/ollama:/root/.ollama
