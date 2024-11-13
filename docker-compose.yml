@@ -29,6 +29,9 @@ services:
     environment:
       - OLLAMA_KEEP_ALIVE=24h
       - OLLAMA_HOST=0.0.0.0
+    command:
+      - "-c"
+      - "sleep 10; OLLAMA_HOST=ollama:11434 ollama pull llama3.1; OLLAMA_HOST=ollama:11434 ollama pull nomic-embed-text"
     # networks:
     #   - ollama-docker
 
